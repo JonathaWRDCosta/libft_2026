@@ -6,7 +6,7 @@
 /*   By: jonatha <jonatha@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:18:09 by jonatha           #+#    #+#             */
-/*   Updated: 2026/11/08 22:35:12 by jonatha          ###   ########.fr       */
+/*   Updated: 2026/11/10 04:59:35 by jonatha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main(void)
     char bzero[] = "Hello world BZERO";
     char memcpy[] = "Hello world memcpy";
     char memcpy1[6] = "";
+    char memmove[] = "Hello world memcpy memmove";
+    char memmove1[6] = "";
 
     printf("==============================================================\n");
     printf("ft_isprint(97) = %d\n", ft_isprint(97));
@@ -43,6 +45,9 @@ int main(void)
     printf("ft_bzero(Hello world BZERO), 5= %c\n", bzero[6]);
     printf("==============================================================\n");
     printf("ft_memcpy(Hello world memcpy) , xxxxx0, 5= %s\n", (char *)ft_memcpy(memcpy1, memcpy, 5));
+    printf("==============================================================\n");
+    printf("ft_memmove(Hello world memcpy memmove) , xxxxx0, 5= %s\n", (char *)ft_memmove(memmove1, memmove, 5));
+    printf("memmove(Hello world memcpy memmove) , xxxxx0, 5= %s\n", (char *)memmove(memmove1, memmove, 5));
     
     return (0);
 }
