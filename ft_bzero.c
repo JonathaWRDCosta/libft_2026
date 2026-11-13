@@ -6,13 +6,13 @@
 /*   By: jonatha <jonatha@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 21:33:54 by jonatha           #+#    #+#             */
-/*   Updated: 2026/11/08 21:55:20 by jonatha          ###   ########.fr       */
+/*   Updated: 2026/11/13 20:47:49 by jonatha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, '\0', n);
+	ft_memset(s, '\0', n);
 }

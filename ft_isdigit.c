@@ -6,16 +6,16 @@
 /*   By: jonatha <jonatha@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:07:02 by jonatha           #+#    #+#             */
-/*   Updated: 2026/11/08 20:47:44 by jonatha          ###   ########.fr       */
+/*   Updated: 2026/11/13 20:47:31 by jonatha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return(1);
-    else
-        return(0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }

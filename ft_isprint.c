@@ -6,16 +6,16 @@
 /*   By: jonatha <jonatha@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:11:39 by jonatha           #+#    #+#             */
-/*   Updated: 2026/11/08 20:47:44 by jonatha          ###   ########.fr       */
+/*   Updated: 2026/11/13 20:47:53 by jonatha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c < 32 || c > 126)
-        return(0);
-    else
-        return(1);
+	if (c < 32 || c > 126)
+		return (0);
+	else
+		return (1);
 }
