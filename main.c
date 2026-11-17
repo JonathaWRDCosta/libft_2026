@@ -276,7 +276,8 @@ static void	test_atoi(void)
 
 static void	test_calloc(void)
 {
-	unsigned char	*buffer;
+	int				*buffer;
+	int				expected[4] = {0};
 
 	buffer = ft_calloc(4, sizeof(*buffer));
 	check_int("ft_calloc: allocation", buffer != NULL, 1);
@@ -284,8 +285,8 @@ static void	test_calloc(void)
 	{
 		check_bytes("ft_calloc: zero initialized",
 					buffer,
-					(unsigned char[]){0, 0, 0, 0},
-					4);
+					expected,
+					sizeof(expected));
 		free(buffer);
 	}
 	check_pointer(
