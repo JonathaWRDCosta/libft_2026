@@ -6,39 +6,52 @@
 /*   By: jonatha <jonatha@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 21:42:26 by jonatha           #+#    #+#             */
-/*   Updated: 2026/11/17 22:17:33 by jonatha          ###   ########.fr       */
+/*   Updated: 2026/11/18 00:55:50 by jonatha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_itoa(int n)
+static int	ft_intlen(int n)
 {
-    size_t i;
-    long num;
-    char *result;
-    i = 0;
-    num = n;
+	int		len;
+	long	nb;
 
-    if (n == 0)
-        i = 1;
-    if (num < 0)
-        num = num * -1;
-    while (num > 0)
-    {
-        num = num / 10;
-        i++;
-    }
-    if (n < 0)
-        i = i + 1;
-    result = malloc((i + 1) * sizeof(char));
-    if(!result)
-        return(NULL);
-    num = n;
-    result[i] = '\0';
-    while (--i >= 0)
-    {
-        result[i] = num % 10 + '0';
-        num--;
-    }
+	len = 1;
+	nb = n;
+	if (nb < 0)
+	{
+		nb = -nb;
+		len++;
+	}
+	while (nb >= 10)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	int		intlen;
+	char	*str;
+	long	nb;
+
+	intlen = ft_intlen(n);
+	str = ft_calloc(intlen + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	nb = n;
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	while (intlen > 0 && str[intlen - 1] != '-')
+	{
+		str[--intlen] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	return (str);
 }
